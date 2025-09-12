@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hàu Biển OB – Tăng Cường Sinh Lực Nam Giới Tự Nhiên, An Toàn</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto+Flex:opsz,wght@8..144,400;8..144,700&display=swap" rel="stylesheet">
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: 'Roboto Flex', sans-serif;
+        background: radial-gradient(circle, hsl(210 15% 30%), hsl(210 15% 20%), hsl(210 15% 12%));
+        background-attachment: fixed;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.5); /* Added for readability */
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Oswald', sans-serif;
+        letter-spacing: 0.025em; /* Added for prominence */
+      }
+      
+      /* Styles for the glowing LED chase border effect */
+      @keyframes led-chase-animation {
+        0% { background-position: 400% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+
+      .led-chase-border {
+        background: repeating-linear-gradient(
+          90deg,
+          #ff8a80, /* Soft Red */
+          #ffcc80, /* Soft Orange */
+          #fff59d, /* Soft Yellow */
+          #a5d6a7, /* Soft Green */
+          #81d4fa, /* Soft Blue */
+          #b39ddb, /* Soft Purple */
+          #ff8a80  /* Loop back to Soft Red */
+        );
+        background-size: 400% 100%;
+        animation: led-chase-animation 30s linear infinite; /* Slower animation */
+      }
+      
+      /* The soft glow effect that emanates from behind the border */
+      .led-chase-border::before {
+        content: '';
+        position: absolute;
+        inset: -10px; /* Make it larger than the parent */
+        z-index: -1;
+        background: inherit; /* Use the same animated gradient */
+        animation: inherit;  /* Use the same animation */
+        filter: blur(20px); /* The glow effect */
+        opacity: 0.5; /* More subtle glow */
+      }
+
+      /* New styles for prominent info cards and inputs */
+      .info-card {
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+      }
+      .info-card-interactive {
+        transition: all 0.3s ease-in-out;
+      }
+      .info-card-interactive:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 184, 148, 0.2);
+        border-color: rgba(0, 184, 148, 0.5);
+      }
+
+      input[type="text"]:focus, 
+      input[type="tel"]:focus, 
+      textarea:focus {
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 184, 148, 0.4);
+      }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Viên uống Hàu Biển OB",
+      "image": "/hau-bien-ob-product.png",
+      "description": "Hàu Biển OB - Giải pháp tăng cường sinh lực và cải thiện sinh lý an toàn từ biển cả, với chiết xuất hàu biển tự nhiên kết hợp cùng Kẽm và Selen.",
+      "brand": {
+        "@type": "Brand",
+        "name": "ANPHAR VIỆT NAM"
+      },
+      "sku": "HBOB-BOX-01",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "VND",
+        "price": "329000",
+        "priceValidUntil": "2025-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "158"
+      }
+    }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1"
+  }
+}
+</script>
+</head>
+  <body class="text-slate-200">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
