@@ -29,10 +29,10 @@
         100% { background-position: 0% 50%; }
       }
 
-      /* New keyframes for the marquee effect */
-      @keyframes marquee-animation {
-        from { transform: translateX(0); }
-        to { transform: translateX(-50%); }
+      /* New keyframes for the carousel effect */
+      @keyframes rotate-carousel {
+        from { transform: rotateY(0deg); }
+        to { transform: rotateY(-360deg); }
       }
 
       .led-chase-border {
@@ -80,6 +80,57 @@
       input[type="tel"]:focus, 
       textarea:focus {
         box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 184, 148, 0.4);
+      }
+
+      /* New styles for 3D carousel */
+      .carousel-container {
+        position: relative;
+        width: 100%;
+        min-height: 400px; /* Ensure enough height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        perspective: 1500px;
+        overflow: hidden; /* Hide items when they are far back */
+      }
+
+      .carousel-track {
+        position: relative;
+        transform-style: preserve-3d;
+        animation: rotate-carousel 40s linear infinite;
+        animation-play-state: running;
+      }
+
+      .carousel-container:hover .carousel-track {
+        animation-play-state: paused;
+      }
+
+      .carousel-item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 280px;  /* Width for a clear view */
+        height: 210px; /* Maintain 4:3 aspect ratio */
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 12px;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        backdrop-filter: blur(4px);
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden; /* Hide the back of items */
+      }
+
+      .carousel-item img {
+        filter: brightness(0.9);
+        transition: filter 0.3s ease;
       }
     </style>
     <script type="application/ld+json">
