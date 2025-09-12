@@ -37,7 +37,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="sticky top-0 z-40 bg-slate-900/60 backdrop-blur-lg border-b border-white/10 shadow-lg">
+    <header className="sticky top-0 z-40 bg-slate-900/60 backdrop-blur-lg border-b border-white/10 shadow-lg sm:rounded-t-lg">
       <div className="container mx-auto px-4 sm:px-6 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
@@ -55,7 +55,7 @@ const Header: React.FC = () => {
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleScroll(e, link.href)}
-                className="text-slate-200 hover:text-white font-bold transition-colors duration-300"
+                className="nav-link-glow"
               >
                 {link.text}
               </a>
@@ -98,7 +98,7 @@ const Header: React.FC = () => {
               key={link.href}
               href={link.href}
               onClick={(e) => handleScroll(e, link.href)}
-              className="text-slate-200 hover:text-white font-bold transition-colors duration-300 text-lg"
+              className="nav-link-glow text-lg"
             >
               {link.text}
             </a>

@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import HeroSection from './components/HeroSection';
 import ProblemSection from './components/ProblemSection';
@@ -30,9 +31,13 @@ const App: React.FC = () => {
             <PricingSection />
             <section className="py-16 md:py-24">
               <div className="container mx-auto px-4 sm:px-6">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-                  <PartnerPharmaciesSection />
-                  <OrderFormSection />
+                <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-stretch">
+                  <div className="lg:col-span-2 flex flex-col">
+                    <PartnerPharmaciesSection />
+                  </div>
+                  <div className="lg:col-span-3 flex flex-col">
+                    <OrderFormSection />
+                  </div>
                 </div>
               </div>
             </section>

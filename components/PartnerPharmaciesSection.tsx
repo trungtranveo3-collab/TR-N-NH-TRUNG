@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../lib/translations';
@@ -29,7 +30,7 @@ const PartnerPharmaciesSection: React.FC = () => {
 
   return (
     <div className="flex flex-col h-full">
-      <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-12">
+      <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-8">
         {t.title}
       </h2>
       

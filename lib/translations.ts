@@ -104,7 +104,6 @@ export const translations = {
     },
     testimonials: {
       title: "Evidence & Trust",
-      subtitle: "What Our Customers Say",
       ageSuffix: "years old",
       cards: [
         {
@@ -122,11 +121,6 @@ export const translations = {
           quote: "The product is safe, with no side effects. I completed a 3-month course and am very satisfied.",
         },
       ],
-      expert: {
-        title: "Expert's Perspective",
-        quote: "Oyster OB is a scientific combination of natural oyster extract and essential micronutrients. The product effectively supports the improvement of physiology and overall health for men safely.",
-        expertName: "Pharmacist Nguyen Thanh Trung",
-      },
       certification: {
         title: "Product Licensed by the Ministry of Health",
         subtitle: "Registration No: 5040/2021/ĐKSP",
@@ -278,7 +272,6 @@ export const translations = {
     },
     testimonials: {
       title: "Minh Chứng & Sự Tin Cậy",
-      subtitle: "Khách Hàng Nói Gì Về Chúng Tôi",
       ageSuffix: "tuổi",
       cards: [
         {
@@ -296,11 +289,6 @@ export const translations = {
           quote: 'Sản phẩm an toàn, không tác dụng phụ. Tôi đã dùng liệu trình 3 tháng và rất hài lòng.',
         },
       ],
-      expert: {
-        title: "Góc Nhìn Chuyên Gia",
-        quote: "Hàu Biển OB là sự kết hợp khoa học giữa chiết xuất hàu biển tự nhiên và các vi chất thiết yếu. Sản phẩm hỗ trợ tốt cho việc cải thiện sinh lý và tăng cường sức khỏe toàn diện cho nam giới một cách an toàn.",
-        expertName: "Dược sĩ Nguyễn Thành Trung",
-      },
       certification: {
         title: "Sản Phẩm Đã Được Bộ Y Tế Cấp Phép",
         subtitle: "Số ĐKSP: 5040/2021/ĐKSP",

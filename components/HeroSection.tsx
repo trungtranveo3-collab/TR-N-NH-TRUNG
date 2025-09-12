@@ -36,7 +36,7 @@ const HeroSection: React.FC = () => {
           {/* --- LEFT COLUMN (Desktop): Avatar/Product Image --- */}
           {/* Stacks on top on mobile */}
           <div className="lg:col-span-5">
-            <div className="info-card p-4 rounded-lg shadow-xl shadow-black/30 h-full flex items-center justify-center border-2 border-white/10">
+            <div className="info-card p-6 md:p-8 rounded-lg shadow-xl shadow-black/30 h-full flex items-center justify-center border-2 border-white/10">
               <img 
                 src="/hau-bien-ob-product.png" 
                 alt="Viên uống hàu biển OB tăng cường sinh lực nam giới" 
@@ -49,10 +49,10 @@ const HeroSection: React.FC = () => {
           {/* --- RIGHT COLUMN (Desktop): Title, Description, CTA --- */}
           {/* Stacks below on mobile, content is centered */}
           <div className="lg:col-span-7">
-            <div className="info-card p-8 md:p-10 rounded-lg shadow-xl shadow-black/30 h-full flex flex-col border-2 border-transparent text-center lg:text-left">
+            <div className="info-card p-6 md:p-8 rounded-lg shadow-xl shadow-black/30 h-full flex flex-col border-2 border-transparent text-center lg:text-left">
               <div className="flex-grow">
                 {/* --- RESPONSIVE TYPOGRAPHY: Larger on desktop, smaller on mobile --- */}
-                <h1 className="text-[28px] sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-6">
+                <h1 className="text-[28px] md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-6">
                   {t.title}
                 </h1>
                 <p className="text-lg md:text-xl text-slate-300 mb-8">

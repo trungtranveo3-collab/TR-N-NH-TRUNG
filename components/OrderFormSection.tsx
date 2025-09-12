@@ -1,4 +1,5 @@
 
+
 import React, { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../lib/translations';
@@ -48,15 +49,15 @@ const OrderFormSection: React.FC = () => {
 
   return (
     <div id="order-form" className="flex flex-col h-full">
-      <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-12">
+      <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-8">
         {t.title}
       </h2>
       
       {/* Order Form */}
-      <div className="info-card p-8 rounded-lg shadow-xl shadow-black/30 flex-grow">
-        <h3 className="text-xl md:text-2xl font-bold text-center text-white mb-6">{t.form.title}</h3>
+      <div className="info-card p-6 rounded-lg shadow-xl shadow-black/30 flex-grow">
+        <h3 className="text-xl md:text-2xl font-bold text-center text-white mb-4">{t.form.title}</h3>
         <form id="contact-form-landing-page" onSubmit={handleSubmit}>
-          <div className="grid grid-cols-1 gap-6">
+          <div className="grid grid-cols-1 gap-4">
             <div>
               <label htmlFor="ho_ten" className="block text-sm font-medium text-slate-200 mb-1">{t.form.nameLabel}</label>
               <input type="text" name="ho_ten" id="ho_ten" required className="w-full px-4 py-3 bg-white/10 border border-white/30 text-slate-200 rounded-md focus:ring-2 focus:ring-teal-400 focus:border-teal-400 transition duration-200 placeholder-slate-400" placeholder={t.form.namePlaceholder} />
@@ -75,13 +76,13 @@ const OrderFormSection: React.FC = () => {
             </div>
             <div>
               <label htmlFor="ghi_chu" className="block text-sm font-medium text-slate-200 mb-1">{t.form.notesLabel}</label>
-              <textarea name="ghi_chu" id="ghi_chu" rows={3} className="w-full px-4 py-3 bg-white/10 border border-white/30 text-slate-200 rounded-md focus:ring-2 focus:ring-teal-400 focus:border-teal-400 transition duration-200 placeholder-slate-400" placeholder={t.form.notesPlaceholder}></textarea>
+              <textarea name="ghi_chu" id="ghi_chu" rows={2} className="w-full px-4 py-3 bg-white/10 border border-white/30 text-slate-200 rounded-md focus:ring-2 focus:ring-teal-400 focus:border-teal-400 transition duration-200 placeholder-slate-400" placeholder={t.form.notesPlaceholder}></textarea>
             </div>
             <div>
               <button 
                 type="submit" 
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-teal-500 to-green-600 text-white font-bold py-4 px-8 rounded-full shadow-lg shadow-teal-500/30 hover:from-teal-600 hover:to-green-700 transition duration-300 text-xl transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="pulsing-button w-full bg-gradient-to-r from-teal-500 to-green-600 text-white font-bold py-3 px-8 rounded-full hover:from-teal-600 hover:to-green-700 transition duration-300 text-xl transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? 'Đang gửi...' : t.form.submitButton}
               </button>
