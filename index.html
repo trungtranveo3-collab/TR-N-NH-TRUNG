@@ -29,6 +29,12 @@
         100% { background-position: 0% 50%; }
       }
 
+      /* New keyframes for the marquee effect */
+      @keyframes marquee-animation {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
+      }
+
       .led-chase-border {
         background: repeating-linear-gradient(
           90deg,
