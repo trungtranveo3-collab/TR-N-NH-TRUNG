@@ -1,4 +1,7 @@
 
+// FIX: Import `React` to make the `React` namespace available for `React.ReactNode`.
+import React from 'react';
+
 export interface PricingPlan {
   title: string;
   price: string;

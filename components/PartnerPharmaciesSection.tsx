@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../lib/translations';
@@ -29,31 +27,37 @@ const PartnerPharmaciesSection: React.FC = () => {
   const radius = 380; // in pixels
 
   return (
-    <div className="flex flex-col h-full">
-      <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-8">
-        {t.title}
-      </h2>
+    <div className="relative bg-[url('/majestic-seascape-background.webp')] bg-cover bg-center rounded-lg overflow-hidden shadow-xl shadow-black/30 h-full">
+      {/* Overlay to ensure text readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-black/50 to-transparent"></div>
       
-      {/* The main container for the 3D carousel, using new styles from index.html */}
-      <div className="carousel-container flex-grow">
-        <div className="carousel-track">
-          {partnerImages.map((src, index) => {
-            const itemAngle = anglePerItem * index;
-            // Applying unique inline styles to position each item in a 3D circle
-            const style = {
-              transform: `rotateY(${itemAngle}deg) translateZ(${radius}px)`,
-            };
-            return (
-              <div key={index} className="carousel-item" style={style}>
-                 <img
-                      src={src}
-                      alt={`Partner logo ${index + 1}`}
-                      className="w-full h-full object-contain"
-                      loading="lazy"
-                    />
-              </div>
-            );
-          })}
+      {/* Content container */}
+      <div className="relative z-10 flex flex-col h-full p-6 md:p-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-8">
+          {t.title}
+        </h2>
+        
+        {/* The main container for the 3D carousel, using new styles from index.html */}
+        <div className="carousel-container flex-grow">
+          <div className="carousel-track">
+            {partnerImages.map((src, index) => {
+              const itemAngle = anglePerItem * index;
+              // Applying unique inline styles to position each item in a 3D circle
+              const style = {
+                transform: `rotateY(${itemAngle}deg) translateZ(${radius}px)`,
+              };
+              return (
+                <div key={index} className="carousel-item" style={style}>
+                   <img
+                        src={src}
+                        alt={`Partner logo ${index + 1}`}
+                        className="w-full h-full object-contain"
+                        loading="lazy"
+                      />
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>

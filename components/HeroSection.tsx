@@ -93,7 +93,10 @@ const HeroSection: React.FC = () => {
                   </a>
                 </div>
                 <p className="text-xs text-slate-400 text-center lg:text-left mb-2">{t.ctaMicrocopy}</p>
-                <p className="text-sm font-semibold text-slate-200 text-center lg:text-left">{t.trustRow}</p>
+                <div className="flex items-center justify-center lg:justify-start mt-2">
+                  <span className="text-lg text-[#FDCB6E] mr-2" aria-hidden="true">★★★★★</span>
+                  <p className="text-sm font-semibold text-slate-200">{t.trustRow}</p>
+                </div>
               </div>
             </div>
           </div>

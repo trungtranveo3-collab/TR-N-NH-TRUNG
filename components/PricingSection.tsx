@@ -1,20 +1,36 @@
+
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../lib/translations';
 
-const PricingCard: React.FC<{ title: string; price: string; savings?: string; isRecommended?: boolean; buttonText: string; recommendedText: string; savingsText: string; }> = ({ title, price, savings, isRecommended, buttonText, recommendedText, savingsText }) => {
-  const handleScrollToOrder = (event: React.MouseEvent<HTMLAnchorElement>) => {
-    event.preventDefault();
-    const orderForm = document.getElementById('order-form');
-    if (orderForm) {
-      orderForm.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+interface Plan {
+    title: string;
+    price: string;
+    savings?: string;
+    isRecommended?: boolean;
+    isBestValue?: boolean;
+}
+
+interface PricingCardProps {
+    plan: Plan;
+    buttonText: string;
+    recommendedText: string;
+    savingsText: string;
+    bestValueText: string;
+    onAddToCart: (plan: Plan) => void;
+}
+
+const PricingCard: React.FC<PricingCardProps> = ({ plan, buttonText, recommendedText, savingsText, bestValueText, onAddToCart }) => {
+  const { title, price, savings, isRecommended, isBestValue } = plan;
+  const bestValueRelativeClass = isBestValue && !isRecommended ? 'relative' : '';
 
   return (
-    <div className={`rounded-lg p-6 text-center flex flex-col ${isRecommended ? 'bg-white/5 border-teal-400 border-2 relative shadow-2xl shadow-teal-500/30 transition-transform duration-300 transform hover:-translate-y-2' : 'info-card info-card-interactive shadow-lg shadow-black/20'}`}>
+    <div className={`rounded-lg p-6 text-center flex flex-col ${isRecommended ? 'bg-white/5 border-teal-400 border-2 relative shadow-2xl shadow-teal-500/30 transition-transform duration-300 transform hover:-translate-y-2' : `info-card info-card-interactive shadow-lg shadow-black/20 ${bestValueRelativeClass}`}`}>
       {isRecommended && (
         <span className="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-teal-400 text-slate-900 text-sm font-bold px-4 py-1 rounded-full">{recommendedText}</span>
+      )}
+      {isBestValue && !isRecommended && (
+        <span className="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-amber-400 text-slate-900 text-sm font-bold px-4 py-1 rounded-full">{bestValueText}</span>
       )}
       <div className="flex-grow">
         <h3 className="text-lg sm:text-xl font-bold text-white mb-4">{title}</h3>
@@ -24,17 +40,20 @@ const PricingCard: React.FC<{ title: string; price: string; savings?: string; is
         )}
         {!savings && <p className="mb-6 h-[24px]"></p>}
       </div>
-      <a 
-        href="#order-form" 
-        onClick={handleScrollToOrder}
-        className={`w-full block font-bold py-3 px-6 rounded-full transition duration-300 mt-4 text-lg ${isRecommended ? 'bg-gradient-to-r from-teal-500 to-green-600 text-white hover:from-teal-600 hover:to-green-700' : 'bg-transparent border-2 border-teal-500 text-teal-400 hover:bg-teal-500/20'}`}>
+      <button 
+        onClick={() => onAddToCart(plan)}
+        className={`w-full block font-bold py-3 px-6 rounded-full transition duration-300 mt-4 text-lg ${isRecommended || isBestValue ? 'bg-gradient-to-r from-teal-500 to-green-600 text-white hover:from-teal-600 hover:to-green-700' : 'bg-transparent border-2 border-teal-500 text-teal-400 hover:bg-teal-500/20'}`}>
         {buttonText}
-      </a>
+      </button>
     </div>
   );
 };
 
-const PricingSection: React.FC = () => {
+interface PricingSectionProps {
+    onAddToCart: (plan: Plan) => void;
+}
+
+const PricingSection: React.FC<PricingSectionProps> = ({ onAddToCart }) => {
   const { language } = useLanguage();
   const t = translations[language].pricing;
 
@@ -48,13 +67,12 @@ const PricingSection: React.FC = () => {
           {t.plans.map((plan, index) => (
             <PricingCard 
               key={index}
-              title={plan.title} 
-              price={plan.price} 
-              savings={plan.savings}
-              isRecommended={plan.isRecommended}
+              plan={plan}
               buttonText={t.buyNow}
               recommendedText={t.recommended}
               savingsText={t.save}
+              bestValueText={t.bestValue}
+              onAddToCart={onAddToCart}
             />
           ))}
         </div>

@@ -8,6 +8,21 @@ const QuoteIcon = () => (
     </svg>
 )
 
+const OfficialSealIcon = () => (
+  <div className="relative h-20 w-20">
+    {/* Faint spinning glow for effect */}
+    <svg className="absolute inset-0 h-full w-full text-amber-400/30 animate-spin" style={{ animationDuration: '10s', animationTimingFunction: 'linear' }} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+    {/* Main seal icon */}
+    <svg className="relative h-full w-full text-amber-400" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M12 15.7L8.23 18L9.23 13.7L6 10.8L10.33 10.4L12 6.5L13.67 10.4L18 10.8L14.77 13.7L15.77 18L12 15.7Z" fill="currentColor" />
+    </svg>
+  </div>
+);
+
+
 const TestimonialsSection: React.FC = () => {
   const { language } = useLanguage();
   const t = translations[language].testimonials;
@@ -38,10 +53,8 @@ const TestimonialsSection: React.FC = () => {
           ))}
 
           {/* Certification Card */}
-          <div className="info-card info-card-interactive p-6 rounded-lg shadow-lg shadow-black/20 flex flex-col justify-center items-center text-center h-full">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-green-400" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-            </svg>
+          <div className="info-card info-card-interactive p-6 rounded-lg shadow-lg shadow-amber-500/10 flex flex-col justify-center items-center text-center h-full border-2 border-amber-400/50 bg-amber-400/5 hover:border-amber-400 hover:shadow-amber-500/20">
+            <OfficialSealIcon />
             <p className="text-xl sm:text-2xl font-bold text-slate-100 mt-4">{t.certification.title}</p>
             <p className="text-lg sm:text-xl text-slate-300 mt-2">{t.certification.subtitle}</p>
           </div>

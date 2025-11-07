@@ -4,18 +4,18 @@ export const translations = {
       benefits: "Benefits",
       ingredients: "Ingredients",
       testimonials: "Reviews",
-      pricing: "Pricing",
+      pricing: "Best Offers",
       order: "Order",
     },
     hero: {
-      title: "OYSTER OB - ENHANCE MEN'S VITALITY NATURALLY & SAFELY",
+      title: "AWAKEN YOUR MANLY STRENGTH WITH HÀU BIỂN OB",
       description: "Natural oyster extract combined with Zinc and Selenium helps you regain peak performance and inherent confidence.",
       benefits: [
         "100% natural extract",
         "Safety tested",
         "Recommended by experts",
       ],
-      ctaOrder: ["ORDER NOW", "", "(Offer: Buy 6 Get 1)"],
+      ctaOrder: ["BUY NOW & GET OFFER", "", ""],
       ctaConsult: ["Get a Free", "Consultation", "from an Expert"],
       trustRow: "Over 10,000 satisfied customers • Fast delivery in 24-48h",
       ctaMicrocopy: "7-day free returns • Cash on delivery (COD) available"
@@ -42,7 +42,7 @@ export const translations = {
       ],
     },
     problem: {
-      title: "A Man's Vigor Is Fading Because Of...",
+      title: "DO YOU RECOGNIZE THESE SIGNS?",
       groups: [
         {
           title: "Internal Signs",
@@ -61,7 +61,7 @@ export const translations = {
       ],
     },
     benefits: {
-      title: "Regain Peak Performance with OYSTER OB",
+      title: "Regain Peak Performance with HÀU BIỂN OB",
       cards: [
         { title: "Enhance Vitality", description: "Awaken hidden energy for a healthy and resilient body." },
         { title: "Improve Physiology", description: "Supports enhancing male physiological function, prolonging ecstasy." },
@@ -111,14 +111,14 @@ export const translations = {
           name: 'Mr. Tuan',
           age: 42,
           location: 'Hanoi',
-          quote: "Since using Oyster OB, I feel much healthier and full of energy. My marital life has also improved significantly.",
+          quote: "After about 3 weeks of using Oyster OB, I feel much healthier and full of energy. Notably, my confidence and 'performance' time have also improved significantly. My wife is very happy.",
         },
         {
           avatar: 'https://i.imgur.com/iQr4s6T.jpg',
           name: 'Mr. Minh',
           age: 51,
           location: 'Ho Chi Minh City',
-          quote: "The product is safe, with no side effects. I completed a 3-month course and am very satisfied.",
+          quote: "I completed the 3-month course and am very satisfied. The product is safe, with no side effects, helping me regain my youthful vigor. I will continue to support it.",
         },
       ],
       certification: {
@@ -131,12 +131,13 @@ export const translations = {
       shipping: "FREE NATIONWIDE SHIPPING ON ALL ORDERS",
       save: "Save",
       recommended: "Recommended",
+      bestValue: "Best Value",
       buyNow: "Buy Now",
       plans: [
-        { title: "Trial Pack: 1 Box", price: "329,000đ" },
-        { title: "Optimal Pack: 2 Boxes", price: "625,000đ", savings: "33,000đ" },
-        { title: "Comprehensive Pack: 3 Boxes", price: "889,000đ", savings: "98,000đ", isRecommended: true },
-        { title: "Best Deal: Buy 6 Get 1", price: "1,645,000đ", savings: "329,000đ" },
+        { title: "Starter Course (1 Box)", price: "329,000đ" },
+        { title: "Enhanced Course (2 Boxes)", price: "625,000đ", savings: "33,000đ" },
+        { title: "Comprehensive Course (3 Boxes)", price: "889,000đ", savings: "98,000đ", isRecommended: true },
+        { title: "Optimal Course: Buy 6 Get 1", price: "1,645,000đ", savings: "329,000đ", isBestValue: true },
       ],
     },
     partners: {
@@ -156,7 +157,7 @@ export const translations = {
         vatPlaceholder: "Enter pharmacy name or tax ID",
         notesLabel: "Notes (Optional)",
         notesPlaceholder: "E.g., Deliver during office hours",
-        submitButton: "COMPLETE ORDER - HOME DELIVERY",
+        submitButton: "ORDER NOW",
       },
     },
     footer: {
@@ -172,18 +173,18 @@ export const translations = {
       benefits: "Lợi Ích",
       ingredients: "Thành Phần",
       testimonials: "Đánh Giá",
-      pricing: "Giá Bán",
+      pricing: "Ưu Đãi Hấp Dẫn",
       order: "Đặt Hàng",
     },
     hero: {
-      title: "HÀU BIỂN OB – TĂNG CƯỜNG SINH LỰC NAM GIỚI TỰ NHIÊN, AN TOÀN",
+      title: "ĐÁNH THỨC BẢN LĨNH PHÁI MẠNH CÙNG HÀU BIỂN OB",
       description: "Chiết xuất hàu biển tự nhiên kết hợp cùng Kẽm và Selen giúp bạn lấy lại phong độ đỉnh cao và sự tự tin vốn có.",
       benefits: [
         "100% chiết xuất tự nhiên",
         "Được kiểm nghiệm an toàn",
         "Được chuyên gia khuyên dùng",
       ],
-      ctaOrder: ["ĐẶT MUA NGAY", "", "(Ưu Đãi Mua 6 Tặng 1)"],
+      ctaOrder: ["MUA NGAY & NHẬN ƯU ĐÃI", "", ""],
       ctaConsult: ["Nhận Tư Vấn", "Miễn Phí", "từ Chuyên Gia"],
       trustRow: "Hơn 10.000 khách hàng tin dùng • Giao nhanh 24–48h",
       ctaMicrocopy: "Miễn phí đổi trả 7 ngày • Thanh toán khi nhận hàng (COD)",
@@ -210,7 +211,7 @@ export const translations = {
       ],
     },
     problem: {
-      title: "Bản Lĩnh Phái Mạnh Đang Dần Mất Đi Vì...",
+      title: "BẠN CÓ NHẬN THẤY NHỮNG DẤU HIỆU NÀY?",
       groups: [
         {
           title: "Dấu Hiệu Bên Trong",
@@ -279,14 +280,14 @@ export const translations = {
           name: 'Anh Tuấn',
           age: 42,
           location: 'Hà Nội',
-          quote: 'Từ ngày dùng Hàu Biển OB, tôi thấy cơ thể khỏe khoắn, tràn đầy năng lượng hơn hẳn. Đời sống vợ chồng cũng cải thiện rõ rệt.',
+          quote: 'Sau khoảng 3 tuần dùng Hàu Biển OB, tôi thấy cơ thể khỏe khoắn, tràn đầy năng lượng hơn hẳn. Đặc biệt, sự tự tin và thời gian \'lâm trận\' cũng cải thiện rõ rệt. Vợ tôi rất vui.',
         },
         {
           avatar: 'https://i.imgur.com/iQr4s6T.jpg',
           name: 'Chú Minh',
           age: 51,
           location: 'TP.HCM',
-          quote: 'Sản phẩm an toàn, không tác dụng phụ. Tôi đã dùng liệu trình 3 tháng và rất hài lòng.',
+          quote: 'Tôi đã dùng đủ liệu trình 3 tháng và rất hài lòng. Sản phẩm an toàn, không tác dụng phụ, giúp tôi lấy lại phong độ như thời trai trẻ. Sẽ tiếp tục ủng hộ.',
         },
       ],
       certification: {
@@ -299,12 +300,13 @@ export const translations = {
       shipping: "MIỄN PHÍ VẬN CHUYỂN TOÀN QUỐC CHO MỌI ĐƠN HÀNG",
       save: "Tiết kiệm",
       recommended: "Khuyên Dùng",
+      bestValue: "Tiết Kiệm Nhất",
       buyNow: "Mua Ngay",
       plans: [
-        { title: "Gói Dùng Thử: 1 Hộp", price: "329.000đ" },
-        { title: "Gói Tối Ưu: 2 Hộp", price: "625.000đ", savings: "33.000đ" },
-        { title: "Gói Toàn Diện: 3 Hộp", price: "889.000đ", savings: "98.000đ", isRecommended: true },
-        { title: "Ưu Đãi Lớn Nhất: Mua 6 Tặng 1", price: "1.645.000đ", savings: "329.000đ" },
+        { title: "Liệu Trình Khởi Đầu (1 Hộp)", price: "329.000đ" },
+        { title: "Liệu Trình Tăng Cường (2 Hộp)", price: "625.000đ", savings: "33.000đ" },
+        { title: "Liệu Trình Toàn Diện (3 Hộp)", price: "889.000đ", savings: "98.000đ", isRecommended: true },
+        { title: "Liệu Trình Tối Ưu: Mua 6 Tặng 1", price: "1.645.000đ", savings: "329.000đ", isBestValue: true },
       ],
     },
     partners: {
@@ -324,7 +326,7 @@ export const translations = {
         vatPlaceholder: "Nhập tên nhà thuốc hoặc mã số thuế",
         notesLabel: "Ghi Chú (Nếu có)",
         notesPlaceholder: "Ví dụ: Giao hàng trong giờ hành chính",
-        submitButton: "HOÀN TẤT ĐẶT HÀNG - GIAO HÀNG TẬN NƠI",
+        submitButton: "ĐẶT HÀNG NGAY",
       },
     },
     footer: {
